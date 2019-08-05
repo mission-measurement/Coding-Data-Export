@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC038626-E620-4B7F-9937-5B44D9EDD9C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MM.Data.Export</RootNamespace>
+    <AssemblyName>MM.Data.Export</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data, Version=5.0.2229.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql, Version=8.13.1437.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql.Entity.EF6, Version=8.13.1437.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.17\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app_settings.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome_studyenvironments_globals.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome_studyparticipants_globals.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_activities_ugs.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_activities_ugs_modifiers.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_attributecategory.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_backups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_gdataid_outcomeid.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_groups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_groups_items.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_list_ordering.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_messages.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ns_stem_bendef.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ns_stem_outcomes.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_peinterrelationship_groups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_peinterrelationship_groups_items.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_programs.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_activities.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_characteristics.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_comments.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_contexts.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_curriculum.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_effects.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_logistics.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_methods_and_dvs.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_status.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_status_groups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_tags.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeExport.cs" />
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\Beneficiary.cs" />
+    <Compile Include="Models\Characteristic.cs" />
+    <Compile Include="Models\DocumentCodingGroup.cs" />
+    <Compile Include="Models\DocumentInfo.cs" />
+    <Compile Include="fileattachment.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Effects.cs" />
+    <Compile Include="Models\Gene.cs" />
+    <Compile Include="geneomedata_relationships.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genome.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_extended_users.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_import_history.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_stem.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_v.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="genome_groups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="helpcontent.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="helpcontent_tracking.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imprint.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imprint_task_order.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_organization.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_outcome_list.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_categories.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_modifiers.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_types.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_dashboard_searchhistory.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_02.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_02_summary.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_top3_02_summary.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_top5_02.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Outcome.cs" />
+    <Compile Include="next_in_queue_excludes.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch_stem.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch_v.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="number.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="powerbi_links.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rating.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="session.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_genomes.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_genome_groups.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_organization.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_organization_prep.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_outcome_list.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tracking.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usergroup.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="users_onefinalreport.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_permissions.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_pinned.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_registration_codes.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_roles.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_settings.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_tasks.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utility_missingfile_report.cs">
+      <DependentUpon>GenomeManagerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkforceExport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="GenomeManagerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GenomeManagerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GenomeManagerModel.edmx.diagram">
+      <DependentUpon>GenomeManagerModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GenomeManagerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GenomeManagerModel.edmx</DependentUpon>
+      <LastGenOutput>GenomeManagerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GenomeManagerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GenomeManagerModel.edmx</DependentUpon>
+      <LastGenOutput>GenomeManagerModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

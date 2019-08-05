@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="263f02897abd463394f984b9bc4ec8b5" Name="Diagram1">
+        <EntityTypeShape EntityType="GenomeManagerModel.app_settings" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.chromosome_studyenvironments_globals" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.chromosome_studyparticipants_globals" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_activities_ugs" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_activities_ugs_modifiers" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_attributecategory" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_backups" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_gdataid_outcomeid" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_groups" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_groups_items" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_messages" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_ns_stem_bendef" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_ns_stem_outcomes" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_peinterrelationship_groups" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_peinterrelationship_groups_items" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_activities" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_characteristics" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_comments" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_contexts" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_curriculum" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_effects" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_logistics" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_program_methods_and_dvs" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_programs" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_status" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_status_groups" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_tags" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.fileattachment" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.geneomedata_relationships" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genome_groups" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genomedata" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genomedata_extended_users" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genomedata_import_history" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genomedata_stem" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genomedata_v" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.genome" Width="1.5" PointX="8.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.helpcontent" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.helpcontent_tracking" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.imprint" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.imprint_task_order" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.master_organization" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.master_outcome_list" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.master_universalgene_categories" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.master_universalgene_modifiers" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.master_universalgene_types" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.mf_dashboard_searchhistory" Width="1.5" PointX="22.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.mf_genomedataset_02" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.mf_genomedataset_02_summary" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.mf_genomedataset_top3_02_summary" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.mf_genomedataset_top5_02" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.next_in_queue_excludes" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.notesketch" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.notesketch_stem" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.notesketch_v" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.number" Width="1.5" PointX="6.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.powerbi_links" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.rating" Width="1.5" PointX="24.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.session" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.subscribe_genome_groups" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.subscribe_genomes" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.subscribe_organization" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.subscribe_organization_prep" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.subscribe_outcome_list" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.tracking" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_permissions" Width="1.5" PointX="26.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_pinned" Width="1.5" PointX="26.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_registration_codes" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_roles" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_settings" Width="1.5" PointX="26.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user_tasks" Width="1.5" PointX="26.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.usergroup" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.user" Width="1.5" PointX="8.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.users_onefinalreport" Width="1.5" PointX="14.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.utility_missingfile_report" Width="1.5" PointX="16.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GenomeManagerModel.coding_list_ordering" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
